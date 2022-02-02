@@ -1,0 +1,66 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload a file</title>
+     <script src="{% static 'script.js' %}"></script>
+    <link rel="stylesheet" href="../static/css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="cover1">
+        <div class="logo1"></div>
+        <div class="fileLabelGroup" >
+            <div class="fileLabel">
+                <div class="line"></div>
+                <div class="fileName">
+                    <p class="text" id="text"></p><!--Имя файла-->
+                </div>
+                <input class="uploadIcon2" type="file" id='first'  multiple onchange="showname()"/>
+                <svg class="uploadIcon1" width="39" height="38" viewBox="0 0 39 38" fill="none" xmlns="http://www.w3.org/2000/svg" >
+                    <!--Просто не спрашивайте-->
+                    <g clip-path="url(#clip0)">
+                    <path d="M20.516 27.215C20.516 27.5185 20.3899 27.8095 20.1655 28.0241C19.941 28.2387 19.6366 28.3592 19.3192 
+                             28.3592C19.0018 28.3592 18.6974 28.2387 18.4729 28.0241C18.2485 27.8095 18.1224 27.5185 18.1224 
+                             27.215V18.5347L15.3793 21.1596C15.1546 21.3745 14.8498 21.4952 14.5319 21.4952C14.2141 21.4952 
+                             13.9093 21.3745 13.6846 21.1596C13.4599 20.9448 13.3336 20.6534 13.3336 20.3495C13.3336 20.0457 
+                             13.4599 19.7542 13.6846 19.5394L18.4718 14.9624C18.583 14.8559 18.7151 14.7713 18.8605 14.7136C19.0059 
+                             14.6559 19.1618 14.6263 19.3192 14.6263C19.4766 14.6263 19.6325 14.6559 19.7779 14.7136C19.9233 14.7713 
+                             20.0553 14.8559 20.1665 14.9624L24.9538 19.5394C25.1785 19.7542 25.3047 20.0457 25.3047 20.3495C25.3047 
+                             20.6534 25.1785 20.9448 24.9538 21.1596C24.729 21.3745 24.4242 21.4952 24.1064 21.4952C23.7886 21.4952 23.4838 
+                             21.3745 23.2591 21.1596L20.516 18.5347V27.215Z" fill="#232323" fill-opacity="0.75"/>
+
+                    <path d="M33.6809 32.9362V11.1956L22.9096 0.897369H9.7447C8.47504 0.897369 7.25739 1.37959 6.35961 2.23793C5.46183 
+                             3.09628 4.95746 4.26046 4.95746 5.47435V32.9362C4.95746 34.1501 5.46183 35.3143 6.35961 36.1726C7.25739 37.031 
+                             8.47504 37.5132 9.7447 37.5132H28.8937C30.1633 37.5132 31.381 37.031 32.2787 36.1726C33.1765 35.3143 33.6809 
+                             34.1501 33.6809 32.9362ZM22.9096 7.76283C22.9096 8.67325 23.2879 9.54638 23.9612 10.1901C24.6346 10.8339 25.5478 
+                             11.1956 26.5 11.1956H31.2873V32.9362C31.2873 33.5431 31.0351 34.1252 30.5862 34.5544C30.1373 34.9836 29.5285 
+                             35.2247 28.8937 35.2247H9.7447C9.10987 35.2247 8.50104 34.9836 8.05215 34.5544C7.60326 34.1252 7.35108 33.5431 
+                             7.35108 32.9362V5.47435C7.35108 4.8674 7.60326 4.28531 8.05215 3.85614C8.50104 3.42697 9.10987 3.18586 9.7447 
+                             3.18586H22.9096V7.76283Z" fill="#1D9BDC"/>
+                    </g>
+                    <defs>
+                    <clipPath id="clip0">
+                    <rect width="38.2979" height="36.6158" fill="white" transform="translate(0.170227 0.897369)"/>
+                    </clipPath>
+                    </defs>
+                    </svg>
+
+            </div>
+        </div>
+        <div class="buttonGroup">
+            <div class="buttonBottom">
+                <div class="buttonTop">
+                        <p><a class="buttonText1" id="buttonText1" href="{% url 'res' %}">Спрогнозировать</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

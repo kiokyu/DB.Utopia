@@ -1,0 +1,984 @@
+/* Сброс стилей до строки 80 */
+
+/* Указываем box sizing */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Убираем внутренние отступы */
+ul[class],
+ol[class] {
+  padding: 0;
+}
+
+/* Убираем внешние отступы */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Выставляем основные настройки по-умолчанию для body */
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* Удаляем стандартную стилизацию для всех ul и il, у которых есть атрибут class*/
+ul[class],
+ol[class] {
+  list-style: none;
+}
+
+/* Элементы a, у которых нет класса, сбрасываем до дефолтных стилей */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Упрощаем работу с изображениями */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Указываем понятную периодичность в потоке данных у article*/
+article > * + * {
+  margin-top: 1em;
+}
+
+/* Наследуем шрифты для инпутов и кнопок */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Удаляем все анимации и переходы для людей, которые предпочитают их не использовать */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+    }
+}
+
+/*_________________Первая страница_________________*/
+
+.cover1{
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    bottom: 0px;
+
+    background: linear-gradient(312.48deg, rgba(131, 211, 251, 0.85) 15.77%, 
+                            rgba(184, 228, 251, 0.8) 48.72%, #A0DFFF 69.32%, rgba(172, 227, 255, 0.74) 91%);
+}
+
+.logo1{
+    position: relative;
+    width: 190px;
+    height: 190px;
+    left: calc(50% - 190px/2 + 1px);
+    top: calc(50% - 190px/2 - 165px);
+
+    background: url(../img/logo.png);
+    background-size: contain;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+/*_________________Пачка настроек с загрузкой/выводом файла_________________*/
+.fileLabelGroup{
+    position: absolute;
+    width: 690px;
+    height: 59px;
+    left: calc(50% - 690px/2 + 0.5px);
+    top: calc(50% - 59px/2 + 10.5px);
+}
+
+.fileLabel{
+    position: absolute;
+    width: 690px;
+    height: 59px;
+    left: calc(50% - 690px/2);
+    top: 700;
+
+    background: #EBE9E9;
+    mix-blend-mode: normal;
+    border: 0.7px solid rgba(0, 0, 0, 0.24);
+    box-sizing: border-box;
+    box-shadow: 1px 4px 4px 1px rgba(0, 0, 0, 0.25);
+    border-radius: 15px;
+}
+
+.line{
+    position: absolute;
+    width: 45px;
+    height: 0px;
+    left: calc(50% - 45px/2 + 290px);
+    top: calc(50% - 0px/2);
+    
+    border: 1px solid #B7B7B7;
+    transform: rotate(90deg);
+    
+}
+
+.fileName{
+    position: absolute;
+    left: 3.19%;
+    right: 9.57%;
+    top: 16.95%;
+    bottom: 16.95%;
+
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 25px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    
+
+    color: #000000;
+}
+
+.uploadIcon1{
+    position: absolute;
+    left: 93.3%;
+    right: 1%;
+    top: 18%;
+    bottom: 22%;
+}
+
+.uploadIcon2{
+    position: relative;
+    width: 39px;
+    height: 38px;
+    z-index: 2;
+    left: 93.3%;
+    right: 1%;
+    top: 18%;
+    bottom: 22%;
+    content-visibility: hidden;
+    cursor: pointer;
+}
+
+/*_________________Пачка настроек кнопки_________________*/
+/*Общий контейнер*/
+.buttonGroup{
+    position: absolute;
+    width: 250px;
+    height: 59px;
+    left: calc(50% - 250px/2);
+    top: calc(50% - 59px/2 + 120.5px);
+}
+
+/*Нижняя часть плашки*/
+.buttonBottom{
+    position: absolute;
+    left: 0%;
+    right: 0%;
+    top: 0%;
+    bottom: 0%;
+
+    background: rgba(3, 143, 214, 0.58);
+    box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 15px;
+}
+
+/*Верхняя часть плашки*/
+.buttonTop{
+    position: absolute;
+    left: 0.8%;
+    right: 0.8%;
+    top: 3.39%;
+    bottom: 3.39%;
+
+    align-items: center;
+    background: rgba(3, 143, 214, 0.62);
+    border-radius: 15px;
+}
+
+/*Текст*/
+.buttonText1{
+    position: absolute;
+    z-index: 0;
+    left: 0.8%;
+    right: 0.8%;
+    top: 3.39%;
+    bottom: 3.39%;
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-size: 18px;
+    line-height: 25px;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    color: #F8F9FF;
+    pointer-events: none;
+}
+
+.buttonText2{
+    position: relative;
+    z-index: 2;
+    left: 0.8%;
+    right: 0.8%;
+    top: 3.39%;
+    bottom: 3.39%;
+    display: flex;
+    height: 51.28px;
+    width: 242.09px;
+    opacity: 0;
+    cursor: pointer;
+}
+
+/*_________________Вторая страница_________________*/
+
+/*Фон*/
+.cover2{
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    bottom: 0px;
+    
+    background: linear-gradient(312.48deg, rgba(131, 211, 251, 0.85) 15.77%, rgba(184, 228, 251, 0.8) 48.72%, 
+                                #A0DFFF 69.32%, rgba(172, 227, 255, 0.74) 91%);
+}
+
+.logo2{
+    position: absolute;
+    left: 45.2%;
+    right: 45.2%;
+    top: 52.5%;
+    bottom: 29.5%;
+
+    background: url(../img/logo2.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25)); 
+}
+
+/*_________________Пачка настроек и подгрузки изображений монет_________________*/
+.rub1{
+    position: absolute;
+    left: 12%;
+    right: 77%;
+    top: 8%;
+    bottom: 71%;
+
+    background-image: url(../img/svg/ruble.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    mix-blend-mode: luminosity;
+    filter: blur(2px);
+    transform: rotate(-47.5deg);
+}
+
+.rub2{
+    position: absolute;
+    left: 25%;
+    right: 63%;
+    top: 22%;
+    bottom: 57%;
+
+    background-image: url(../img/svg/ruble.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    mix-blend-mode: luminosity;
+    filter: blur(2px);
+    transform: rotate(139deg);
+}
+
+.rub3{
+    position: absolute;
+    left: 12%;
+    right: 77%;
+    top: 46%;
+    bottom: 33%;
+
+    background-image: url(../img/svg/ruble.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    mix-blend-mode: luminosity;
+    filter: blur(2px);
+    transform: rotate(23.5deg);
+}
+
+.rub4{
+    position: absolute;
+    left: 44%;
+    right: 44%;
+    top: 33%;
+    bottom: 46%;
+
+    background-image: url(../img/svg/ruble.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    mix-blend-mode: luminosity;
+    filter: blur(2px);
+    transform: rotate(26deg);
+}
+
+.rub5{
+    position: absolute;
+    left: 65%;
+    right: 24%;
+    top: 9%;
+    bottom: 70%;
+
+    background-image: url(../img/svg/ruble.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    mix-blend-mode: luminosity;
+    filter: blur(2px);
+    transform: rotate(49deg);
+}
+
+.rub6{
+    position: absolute;
+    left: 74%;
+    right: 15%;
+    top: 39%;
+    bottom: 40%;
+
+    background-image: url(../img/svg/ruble.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    mix-blend-mode: luminosity;
+    filter: blur(2px);
+    transform: rotate(-47.5deg);
+}
+
+.rub7{
+    position: absolute;
+    left: 45%;
+    right: 40%;
+    top: 3%;
+    bottom: 78%;
+    
+    background-image: url(../img/svg/ruble.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    mix-blend-mode: luminosity;
+    filter: blur(2px);
+    transform: rotate(40deg);
+}
+
+.rub8{
+    position: absolute;
+    left: 23%;
+    right: 65%;
+    top: 77%;
+    bottom: 5%;
+    
+    background-image: url(../img/svg/ruble.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    mix-blend-mode: luminosity;
+    filter: blur(2px);
+    transform: rotate(-47.5deg);
+}
+
+.rub9{
+    position: absolute;
+    left: 49%;
+    right: 39%;
+    top: 70%;
+    bottom: 10%;
+    
+    background-image: url(../img/svg/ruble.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    mix-blend-mode: luminosity;
+    filter: blur(2px);
+    transform: rotate(-95.5deg);
+}
+
+.rub10{
+    position: absolute;
+    left: 73%;
+    right: 15%;
+    top: 73%;
+    bottom: 7%;
+    
+    background-image: url(../img/svg/ruble.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    mix-blend-mode: luminosity;
+    filter: blur(2px);
+    transform: rotate(-140.5deg);
+}
+
+/*Две плашки для графиков*/
+.graph1{
+    position: absolute;
+    left: 19.67%;
+    right: 56.33%;
+    top: 44.12%;
+    bottom: 21.12%;
+
+    background-image: url(../img/graph1.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    /*box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);*/
+}
+
+.graph2{
+    position: absolute;
+    left: 56.33%;
+    right: 19.67%;
+    top: 44.12%;
+    bottom: 21.12%;
+
+    background-image: url(../img/graph2.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    /*box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);*/
+}
+
+/*_________________Пачка настроек элементов таблицы_________________*/
+/*Статические по горизонтали*/
+/*Внешний контейнер*/
+.hTitle1{
+    position: absolute;
+    left: 36.33%;
+    right: 51%;
+    top: 11.25%;
+    bottom: 81.38%;
+}
+
+/*Сама плашка*/
+.hBar1{
+    position: absolute;
+    left: 0%;
+    right: 0%;
+    top: 0%;
+    bottom: -1.69%;
+
+    background: #23B5FF;
+    box-shadow: 1px 1px 4px -1px rgba(0, 0, 0, 0.25);
+    border-radius: 8px;
+}
+
+/*Текст в плашке*/
+.hText1{
+    position: absolute;
+    left: 1.05%;
+    right: 1.05%;
+    top: 3.39%;
+    bottom: 3.39%;
+
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 25px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+
+    color: #FFFFFF;
+}
+/*Дальше по аналогии*/
+
+.hTitle2{
+    position: absolute;
+    left: 51%;
+    right: 36.33%;
+    top: 11.25%;
+    bottom: 81.38%;
+}
+
+.hBar2{
+    position: absolute;
+    left: 0%;
+    right: 0%;
+    top: 0%;
+    bottom: -1.69%;
+
+    background: #23B5FF;
+    box-shadow: 1px 1px 4px -1px rgba(0, 0, 0, 0.25);
+    border-radius: 8px;
+}
+
+.hText2{
+    position: absolute;
+    left: 1.05%;
+    right: 1.05%;
+    top: 3.39%;
+    bottom: 3.39%;
+
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 25px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+
+    color: #FFFFFF;
+}
+
+.hTitle3{
+    position: absolute;
+    left: 65.67%;
+    right: 21.67%;
+    top: 11.25%;
+    bottom: 81.38%;
+}
+
+.hBar3{
+    position: absolute;
+    left: 0%;
+    right: 0%;
+    top: 0%;
+    bottom: -1.69%;
+
+    background: #23B5FF;
+    box-shadow: 1px 1px 4px -1px rgba(0, 0, 0, 0.25);
+    border-radius: 8px;
+}
+
+.hText3{
+    position: absolute;
+    left: 1.05%;
+    right: 1.05%;
+    top: 3.39%;
+    bottom: 3.39%;
+
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 25px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+
+    color: #FFFFFF;
+}
+
+/*Статические по вертикали*/
+.vTitle1{
+    position: absolute;
+    left: 21.67%;
+    right: 65.67%;
+    top: 21.25%;
+    bottom: 71.38%;
+}
+
+.vBar1{
+    position: absolute;
+    left: 0%;
+    right: 0%;
+    top: 0%;
+    bottom: -1.69%;
+
+    background: #23B5FF;
+    box-shadow: 1px 1px 4px -1px rgba(0, 0, 0, 0.25);
+    border-radius: 8px;
+}
+
+.vText1{
+    position: absolute;
+    left: 1.05%;
+    right: 1.05%;
+    top: 3.39%;
+    bottom: 3.39%;
+
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 25px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+
+    color: #FFFFFF;
+}
+
+.vTitle2{
+    position: absolute;
+    left: 21.67%;
+    right: 65.67%;
+    top: 31.25%;
+    bottom: 61.38%;
+}
+
+.vBar2{
+    position: absolute;
+    left: 0%;
+    right: 0%;
+    top: 0%;
+    bottom: -1.69%;
+
+    background: #23B5FF;
+    box-shadow: 1px 1px 4px -1px rgba(0, 0, 0, 0.25);
+    border-radius: 8px;
+}
+
+.vText2{
+    position: absolute;
+    left: 1.05%;
+    right: 1.05%;
+    top: 3.39%;
+    bottom: 3.39%;
+
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 25px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+
+    color: #FFFFFF;
+}
+
+/*Статическая угловая*/
+.headTitle{
+    position: absolute;
+    left: 21.67%;
+    right: 65.67%;
+    top: 11.25%;
+    bottom: 81.25%;
+}
+
+.headBar{
+    position: absolute;
+    left: 0%;
+    right: 0%;
+    top: 0%;
+    bottom: 0%;
+
+    background: #23B5FF;
+    box-shadow: 1px 1px 4px -1px rgba(0, 0, 0, 0.25);
+}
+
+.headLine{
+    position: absolute;
+    left: -2.7%;
+    right: -3.3%;
+    top: 50%;
+    bottom: 50%;
+
+    border: 2px solid #A2DEFF;
+    transform: rotate(17.27deg);
+}
+
+.headText1{
+    position: absolute;
+    left: 73.16%;
+    right: 11.05%;
+    top: 18.33%;
+    bottom: 50%;
+
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 19px;
+    /* identical to box height */
+
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+    color: #FFFFFF;
+}
+
+.headText2{
+    position: absolute;
+    left: 4.74%;
+    right: 53.16%;
+    top: 51.67%;
+    bottom: 16.67%;
+
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 19px;
+    /* identical to box height */
+
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+    color: #FFFFFF;
+}
+
+/*_________________Пачка настроек плашек, куда выводятся результаты работы МЛки_________________*/
+.res1{
+    position: absolute;
+    left: 36.33%;
+    right: 51%;
+    top: 21.25%;
+    bottom: 71.25%;
+}
+
+.resBar1{
+    position: absolute;
+    left: 0%;
+    right: 0%;
+    top: 0%;
+    bottom: 0%;
+    
+    background: #EBE9E9;
+    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 7px;
+}
+
+.resText1{
+    position: absolute;
+    left: 0%;
+    right: 0%;
+    top: 0%;
+    bottom: 0%;
+    
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 25px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    
+    color: #555454;
+}
+
+.res2{
+    position: absolute;
+    left: 51%;
+    right: 36.33%;
+    top: 21.25%;
+    bottom: 71.25%;
+    
+}
+
+.resBar2{
+    position: absolute;
+    left: 0%;
+    right: 0%;
+    top: 0%;
+    bottom: 0%;
+    
+    background: #EBE9E9;
+    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 7px;
+}
+
+.resText2{
+    position: absolute;
+    left: 0%;
+    right: 0%;
+    top: 0%;
+    bottom: 0%;
+    
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 25px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    
+    color: #555454;    
+}
+
+.res3{
+    position: absolute;
+    left: 65.67%;
+    right: 21.67%;
+    top: 21.25%;
+    bottom: 71.25%;
+    
+}
+
+.resBar3{
+    position: absolute;
+    left: 0%;
+    right: 0%;
+    top: 0%;
+    bottom: 0%;
+    
+    background: #EBE9E9;
+    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 7px;
+}
+
+.resText3{
+    position: absolute;
+    left: 0%;
+    right: 0%;
+    top: 0%;
+    bottom: 0%;
+    
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 25px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    
+    color: #555454;    
+}
+
+.res4{
+    position: absolute;
+    left: 36.33%;
+    right: 51%;
+    top: 31.25%;
+    bottom: 61.25%;
+}
+
+.resBar4{
+    position: absolute;
+    left: 0%;
+    right: 0%;
+    top: 0%;
+    bottom: 0%;
+    
+    background: #EBE9E9;
+    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 7px;
+}
+
+.resText4{
+    position: absolute;
+    left: 0%;
+    right: 0%;
+    top: 0%;
+    bottom: 0%;
+    
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 25px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    
+    color: #555454;
+       
+}
+
+.res5{
+    position: absolute;
+    left: 51%;
+    right: 36.33%;
+    top: 31.25%;
+    bottom: 61.25%;
+    
+}
+
+.resBar5{
+    position: absolute;
+    left: 0%;
+    right: 0%;
+    top: 0%;
+    bottom: 0%;
+    
+    background: #EBE9E9;
+    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 7px;
+}
+
+.resText5{
+    position: absolute;
+    left: 0%;
+    right: 0%;
+    top: 0%;
+    bottom: 0%;
+    
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 25px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    
+    color: #555454;
+        
+}
+
+.res6{
+    position: absolute;
+    left: 65.67%;
+    right: 21.67%;
+    top: 31.25%;
+    bottom: 61.25%;
+    
+}
+
+.resBar6{
+    position: absolute;
+    left: 0%;
+    right: 0%;
+    top: 0%;
+    bottom: 0%;
+    
+    background: #EBE9E9;
+    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 7px;
+}
+
+.resText6{
+    position: absolute;
+    left: 0%;
+    right: 0%;
+    top: 0%;
+    bottom: 0%;
+    
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 25px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    
+    color: #555454;    
+}
